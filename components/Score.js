@@ -6,9 +6,13 @@ import {
 
 export default  function Question({navigation}) {
     return (
-        <div>
-            
-        </div>
+        <View style={styles.container} >
+          <Text>Score</Text>
+          <Text>{navigation.getParam('score')}</Text>
+          <Text>Highcore</Text>
+          <Text>{navigation.getParam('highscore')}</Text>
+          <Text>{navigation.getParam('duration')}</Text>
+        </View>
     );
 }
 

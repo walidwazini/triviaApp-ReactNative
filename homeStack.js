@@ -3,6 +3,7 @@ import { createAppContainer } from "react-navigation"
 import Home from "./components/Home";
 import Question from "./components/Question";
 import Score from "./components/Score"
+import About from "./components/About";
 
 
 const screens = {
@@ -14,6 +15,9 @@ const screens = {
     },
     Score: {
         screen:Score,
+    },
+    About: {
+        screen: About,
     }
 }
 

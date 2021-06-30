@@ -4,16 +4,14 @@ import {
     ScrollView, SafeAreaView, TextInput, ImageBackground, ActivityIndicator
 } from 'react-native';
 import { Button, Card } from 'react-native-elements';
-import { LinearGradient } from 'react-native-linear-gradient';
-import LinearGradient from 'react-native-linear-gradient'
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 export default function Home({ navigation }) {
     return (
-        <View style={styles.container}>
-            <LinearGradient colors={['red','yellow']} >
-                <Text>Hello</Text>
-            </LinearGradient>
+        <LinearGradient  colors={['#12c2e9','#c471ed','#f64f59']} 
+        start={ {x: 0.9, y: 0.5} }
+        style={styles.container}>
             <View style={styles.cardHome}>
                 <Image
                     style={{ width: 300, height: 300, top: -10, }}
@@ -30,13 +28,15 @@ export default function Home({ navigation }) {
                         High Score
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.aboutBtn} >
+                <TouchableOpacity  
+                onPress={() => navigation.push('About')}
+                style={styles.aboutBtn} >
                     <Text>
                         About Us
                     </Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </LinearGradient>
     );
 }
 
@@ -46,9 +46,6 @@ const styles = StyleSheet.create({
         // backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundGradient: "vertical",
-        backgroundGradientTop: "#333333",
-        backgroundGradientBottom: "#666666"
     },
     cardHome: {
         width: '70%',
